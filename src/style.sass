@@ -1,0 +1,125 @@
+/* The version of Bourbon used in this Pen was 4.* */
+@import "bourbon"
+@import url(https://fonts.googleapis.com/css?family=Lobster|Open+Sans+Condensed:300|Open+Sans)
+$primary: #CDDFA0 
+$secondary: #7B9EA8
+$highlight: #78586F
+$fancy-font: 'Lobster', 'Open Sans', Palatino
+$btn: #6FD08C
+$block-bg: #fff
+$striping: #E6C79C
+$main-font: 'Arial', sans-serif
+$columns: 4
+*
+	margin: 0
+	padding: 0
+
+body
+	background-color: $primary
+	font-family: $main-font
+	font-size: 13px
+	line-height: 1.5em
+
+ul, li
+	list-style: none
+
+a
+	text-decoration: none
+	color: $primary
+	font-weight: bold
+
+em
+	font-style: bold
+	color: $highlight
+	font-size: em(16)
+
+.container
+	width: 900px
+	margin: 100px auto
+	max-width: 900px
+
+.tbl-block
+	float: left
+	@if columns == 4
+		width: 23%
+	@else if columns == 3
+		width: 30%
+	@else 
+		width: 23%
+	margin: 0 1%
+	box-sizing: border-box
+	background: $block-bg
+	margin-bottom: 10px
+	+transition(all 0.2s ease-in-out)
+	h3
+		background: $secondary
+		font-family: $fancy-font
+		letter-spacing: 0.17em
+		color: $block-bg
+		text-align: center
+		font-size: em(25)
+		padding: em(15)
+	
+.price
+	text-align: center
+	padding: em(20)
+	background: darken($highlight, 10%)
+	color: #fff
+	span
+		font-size: 25px
+		font-weight: bold
+	
+.features
+	li
+		line-height: 2em
+		text-align: center
+		padding: 10px 0
+		&:nth-child(odd)
+			background: $striping
+		
+	em
+		font-weight: bold
+		color: darken($highlight, 10%)
+
+a.btn
+	padding: 7px 10px
+	border: #ccc solid 1px
+	display: block
+	text-align: center
+	+margin(5px)
+	+border-top-radius(5px)
+	+border-bottom-radius(5px)
+
+a.btn-primary
+	background: desaturate($btn, 20%)
+	color: $block-bg
+	&:hover
+		background: $btn 
+		
+/* Featured Package */
+.highlight
+	height: 520px
+	margin-top: -30px
+	border: $block-bg solid 4px
+	a.btn
+		margin-top: 7px
+	li
+		padding: 12px !important
+	
+/* Mobile */
+
+@media(max-width: 768px) 
+	.container
+		width: 80%
+
+	.tbl-block
+		float: none
+		width: 100%
+		&:hover
+			border: 0
+	
+	.highlight 
+		height: auto
+		margin-top: 0
+		border: 0
+	

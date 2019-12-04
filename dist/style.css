@@ -1,0 +1,131 @@
+@import url(https://fonts.googleapis.com/css?family=Lobster|Open+Sans+Condensed:300|Open+Sans);
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #CDDFA0;
+  font-family: "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 1.5em;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #CDDFA0;
+  font-weight: bold;
+}
+
+em {
+  font-style: bold;
+  color: #78586F;
+  font-size: 1em;
+}
+
+.container {
+  width: 900px;
+  margin: 100px auto;
+  max-width: 900px;
+}
+
+.tbl-block {
+  float: left;
+  width: 23%;
+  margin: 0 1%;
+  box-sizing: border-box;
+  background: #fff;
+  margin-bottom: 10px;
+  transition: all 0.2s ease-in-out;
+}
+.tbl-block h3 {
+  background: #7B9EA8;
+  font-family: "Lobster", "Open Sans", Palatino;
+  letter-spacing: 0.17em;
+  color: #fff;
+  text-align: center;
+  font-size: 1.5625em;
+  padding: 0.9375em;
+}
+
+.price {
+  text-align: center;
+  padding: 1.25em;
+  background: #5b4254;
+  color: #fff;
+}
+.price span {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.features li {
+  line-height: 2em;
+  text-align: center;
+  padding: 10px 0;
+}
+.features li:nth-child(odd) {
+  background: #E6C79C;
+}
+.features em {
+  font-weight: bold;
+  color: #5b4254;
+}
+
+a.btn {
+  padding: 7px 10px;
+  border: #ccc solid 1px;
+  display: block;
+  text-align: center;
+  margin: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+a.btn-primary {
+  background: #82bd94;
+  color: #fff;
+}
+a.btn-primary:hover {
+  background: #6FD08C;
+}
+
+/* Featured Package */
+.highlight {
+  height: 520px;
+  margin-top: -30px;
+  border: #fff solid 4px;
+}
+.highlight a.btn {
+  margin-top: 7px;
+}
+.highlight li {
+  padding: 12px !important;
+}
+
+/* Mobile */
+@media(max-width: 768px) {
+  .container {
+    width: 80%;
+  }
+
+  .tbl-block {
+    float: none;
+    width: 100%;
+  }
+  .tbl-block:hover {
+    border: 0;
+  }
+
+  .highlight {
+    height: auto;
+    margin-top: 0;
+    border: 0;
+  }
+}

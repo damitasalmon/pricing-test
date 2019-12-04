@@ -1,0 +1,32 @@
+mixin hello(name, price, size, bandw, email, ftp, sql)
+	.container
+		ul.price-tbl
+			li.tbl-block
+				h3 #{name}
+				div.price
+					span #{price}
+					| &nbsp; Per Month
+				ul.features
+					li 
+						em #{size}&nbsp;
+						| GB Disk Space
+					li 
+						em #{bandw}&nbsp;
+						| GB Bandwith
+					li
+						em #{email}&nbsp;
+						| Email Accounts
+					li
+						em #{ftp}&nbsp;
+						| FTP Accounts
+					li
+						em #{sql}&nbsp;
+						| MySQL Databases
+					li 24/7 Email Support
+				div.tbl-footer
+					a.btn.btn-primary(href='#') Buy Now
+		
++hello('Simple', 8.99, 2, 10, 5, 5, 5)  
++hello('Standard', 14.99, 5, 20, 10, 10, 10)  
++hello('Super', 19.99, 20, 50, 'Unlimited', 'Unlimited', 'Unlimited')  
++hello('Unlimited', 30.99, 'Unlimited','Unlimited','Unlimited','Unlimited','Unlimited')  
